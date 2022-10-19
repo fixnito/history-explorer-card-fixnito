@@ -14,14 +14,14 @@ class HistoryCSVExporter {
     { 
         let data = [];
 
-        data.push("Time stamp,State\r\n");
+        data.push("Time stamp;State\r\n");
 
         for( let r of result ) {
             if( !r.length ) continue;
             data.push(r[0].entity_id + "\r\n");
             for( let e of r ) {
                 const t = moment(e.last_changed).format('YYYY-MM-DD HH:mm:ss');
-                data.push(t + "," + e.state + "\r\n");
+                data.push(t + ";" + e.state + "\r\n");
             }
         }
 
