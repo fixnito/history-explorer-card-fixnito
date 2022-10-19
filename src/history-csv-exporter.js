@@ -51,7 +51,7 @@ class HistoryCSVExporter {
             for( let e of g.entities ) {
                 url += separator;
                 url += e.entity;
-                separator = ',';
+                separator = ';';
                 n++;
             }
         }
